@@ -1,0 +1,722 @@
+{
+	"info": {
+		"_postman_id": "0ea845c9-3070-4c7a-b72c-2c6ca73d999b",
+		"name": "MTLS Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MTLS Token C1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm/EhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS+7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS+8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu+9tcEVRzToup0sAC4O8trOrVA7qs/Je5xusFYmL1ypJhidm0EpPaf+Xf/xsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp+B/AUi4C3jA/yj2nVOy44/vmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K/mVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww+fq8+TX9pNU5/v33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d+TuU4bX+ztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe+HNqGRkcuiEIphSqC/frqUEQQjTqWF4FcZkZTEjVmpU3YBoF/8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV/WXBTDvKFfNJKT6pe7iyRL+omUGDfRdo78IAKD8j5suPQ+YMjNdi+b24PJ+bGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "n022MLKGDBXlQ4z_57o0U58lSBsa",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:9443/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wso2-mtls-cert",
+								"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm/EhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS+7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS+8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu+9tcEVRzToup0sAC4O8trOrVA7qs/Je5xusFYmL1ypJhidm0EpPaf+Xf/xsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp+B/AUi4C3jA/yj2nVOy44/vmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K/mVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww+fq8+TX9pNU5/v33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d+TuU4bX+ztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe+HNqGRkcuiEIphSqC/frqUEQQjTqWF4FcZkZTEjVmpU3YBoF/8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV/WXBTDvKFfNJKT6pe7iyRL+omUGDfRdo78IAKD8j5suPQ+YMjNdi+b24PJ+bGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END CERTIFICATE-----",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "n022MLKGDBXlQ4z_57o0U58lSBsa",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:9443/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Mar 2023 18:11:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "WSO2 Carbon Server"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsIm5iZiI6MTY3OTUwODY4OCwiYXpwIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJyZWFsbSI6eyJzaWduaW5nX3RlbmFudCI6ImNhcmJvbi5zdXBlciJ9LCJleHAiOjE2Nzk1MDg3NDgsImlhdCI6MTY3OTUwODY4OCwianRpIjoiYjBlY2Y2ZDMtMTU5Ni00ZmM3LTk5MjItNzEyMmRkZTY1MDc4In0.DaNkkeP0Q2H2I5TuJm_MF2M13dmqGrfw8LLW-yh7fTD5Z98h8Dsa9Xb5dcqLA4kQ3CgBymngpOAfA-4hz49Kds0-xU-LHi93abUEdT9SX0e4EPpDcFA82yPE0pHZzrdSoLf_mpJcSBLit2g-_dcCE9iy98J6aRwVeVclqfrsMaEvImJ6PR6kIjYrlC7Onhi4Kxx18Cw1aMHG0bXTkaY0jI4j0JeV2RPnZjh4QBP9rQwRFaQOtc6HJqZBaeqD5DZVjAZD-ZBhlmBYmsQ1wHrncDA38z6yCEnthhaaptCw9DMTIm_Xj9oHGydKzgWEzqdY1nC3JhIFdddd-9KFbFOsUg\",\n    \"scope\": \"default\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 60\n}"
+				}
+			]
+		},
+		{
+			"name": "MTLS Token C2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQD2a4EDO0xfYDANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzA0MTIxNDI3NDhaFw0yNDA0MTExNDI3NDhaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxCn8a/qk7RhR8ChxdA9TeVi0nPcNt/LeSHuPjZEwEOXktgZSP1UwIBnPvf1IEGlkDU/j76tZOpMBntrAdzt07KlrVZuM0EA61bKzOs2gSvLS8H4/G40GJtpUw68TlEEXAG89znPR4583R3Xck8AzO79VTpQEv0a0R3HknF4Qqd1iFqkU2zeg8ON9JRFrQGnRDAOfFwTeRBabUzvuXna/xrLcu8EhS9YQ/xqPNhDtnHxdyf5/8oqotLVWAaabOVWmJDlCmRvi66fM427o83ljYCVNP4ipMfvgIjXFLVfzcDX3AHGaLxJD2698WMXBpXRIDilo0phskWLuenH1PCrqywIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBu9QIJQaaqkAodfK1+XqbI/O/rNAYS+gTKbpuEhbGLbI2Dasu4YceArOH+Lb0RN/1ByFl1CeN9zwXhHEgh+45Omqt7ZONP0trv0R+AEHibyOokuxbWOowrRTg2PUR4iyqt8j0DORblqnIYCa/U7muTtb2mOmGq2Dxr7HW4rUy5q9qmEzircw1snGskbBWMfYuJIcl2MkPdUacuMujiqiYOCxQ1xl83ynKFzi92EbmYbmdSU3rqhBjxdeY4D8NoFsvOLc01PjGZH3vt4zWhS/ex2auOAepAMpGvc+tj//qdko6d0nn76rpjD4pidMjC+qLZ/FmxkWVhdOPZsit3CZbK-----END CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "6puf5Y0SufZHOhQ9G9gztBMSR7Ma",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:9443/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wso2-mtls-cert",
+								"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm/EhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS+7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS+8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu+9tcEVRzToup0sAC4O8trOrVA7qs/Je5xusFYmL1ypJhidm0EpPaf+Xf/xsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp+B/AUi4C3jA/yj2nVOy44/vmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K/mVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww+fq8+TX9pNU5/v33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d+TuU4bX+ztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe+HNqGRkcuiEIphSqC/frqUEQQjTqWF4FcZkZTEjVmpU3YBoF/8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV/WXBTDvKFfNJKT6pe7iyRL+omUGDfRdo78IAKD8j5suPQ+YMjNdi+b24PJ+bGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END CERTIFICATE-----",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "n022MLKGDBXlQ4z_57o0U58lSBsa",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:9443/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Mar 2023 18:11:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "WSO2 Carbon Server"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsIm5iZiI6MTY3OTUwODY4OCwiYXpwIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJyZWFsbSI6eyJzaWduaW5nX3RlbmFudCI6ImNhcmJvbi5zdXBlciJ9LCJleHAiOjE2Nzk1MDg3NDgsImlhdCI6MTY3OTUwODY4OCwianRpIjoiYjBlY2Y2ZDMtMTU5Ni00ZmM3LTk5MjItNzEyMmRkZTY1MDc4In0.DaNkkeP0Q2H2I5TuJm_MF2M13dmqGrfw8LLW-yh7fTD5Z98h8Dsa9Xb5dcqLA4kQ3CgBymngpOAfA-4hz49Kds0-xU-LHi93abUEdT9SX0e4EPpDcFA82yPE0pHZzrdSoLf_mpJcSBLit2g-_dcCE9iy98J6aRwVeVclqfrsMaEvImJ6PR6kIjYrlC7Onhi4Kxx18Cw1aMHG0bXTkaY0jI4j0JeV2RPnZjh4QBP9rQwRFaQOtc6HJqZBaeqD5DZVjAZD-ZBhlmBYmsQ1wHrncDA38z6yCEnthhaaptCw9DMTIm_Xj9oHGydKzgWEzqdY1nC3JhIFdddd-9KFbFOsUg\",\n    \"scope\": \"default\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 60\n}"
+				}
+			]
+		},
+		{
+			"name": "MTLS Token C2 wrong cert",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm/EhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS+7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS+8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu+9tcEVRzToup0sAC4O8trOrVA7qs/Je5xusFYmL1ypJhidm0EpPaf+Xf/xsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp+B/AUi4C3jA/yj2nVOy44/vmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K/mVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww+fq8+TX9pNU5/v33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d+TuU4bX+ztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe+HNqGRkcuiEIphSqC/frqUEQQjTqWF4FcZkZTEjVmpU3YBoF/8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV/WXBTDvKFfNJKT6pe7iyRL+omUGDfRdo78IAKD8j5suPQ+YMjNdi+b24PJ+bGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "6puf5Y0SufZHOhQ9G9gztBMSR7Ma",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:9443/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wso2-mtls-cert",
+								"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm/EhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS+7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS+8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu+9tcEVRzToup0sAC4O8trOrVA7qs/Je5xusFYmL1ypJhidm0EpPaf+Xf/xsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp+B/AUi4C3jA/yj2nVOy44/vmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K/mVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww+fq8+TX9pNU5/v33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d+TuU4bX+ztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe+HNqGRkcuiEIphSqC/frqUEQQjTqWF4FcZkZTEjVmpU3YBoF/8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV/WXBTDvKFfNJKT6pe7iyRL+omUGDfRdo78IAKD8j5suPQ+YMjNdi+b24PJ+bGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END CERTIFICATE-----",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "n022MLKGDBXlQ4z_57o0U58lSBsa",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:9443/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Mar 2023 18:11:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1149"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "WSO2 Carbon Server"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsIm5iZiI6MTY3OTUwODY4OCwiYXpwIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJyZWFsbSI6eyJzaWduaW5nX3RlbmFudCI6ImNhcmJvbi5zdXBlciJ9LCJleHAiOjE2Nzk1MDg3NDgsImlhdCI6MTY3OTUwODY4OCwianRpIjoiYjBlY2Y2ZDMtMTU5Ni00ZmM3LTk5MjItNzEyMmRkZTY1MDc4In0.DaNkkeP0Q2H2I5TuJm_MF2M13dmqGrfw8LLW-yh7fTD5Z98h8Dsa9Xb5dcqLA4kQ3CgBymngpOAfA-4hz49Kds0-xU-LHi93abUEdT9SX0e4EPpDcFA82yPE0pHZzrdSoLf_mpJcSBLit2g-_dcCE9iy98J6aRwVeVclqfrsMaEvImJ6PR6kIjYrlC7Onhi4Kxx18Cw1aMHG0bXTkaY0jI4j0JeV2RPnZjh4QBP9rQwRFaQOtc6HJqZBaeqD5DZVjAZD-ZBhlmBYmsQ1wHrncDA38z6yCEnthhaaptCw9DMTIm_Xj9oHGydKzgWEzqdY1nC3JhIFdddd-9KFbFOsUg\",\n    \"scope\": \"default\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 60\n}"
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "H0WfMCEOKFDUDkCwH0_ESI4WLusa",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "WJ8UcwMRUKo6oNihfI0ZykyamNca",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:9443/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Introspect",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsIm5iZiI6MTY3ODQ4NTc1NCwiYXpwIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJyZWFsbSI6eyJzaWduaW5nX3RlbmFudCI6ImNhcmJvbi5zdXBlciJ9LCJleHAiOjE2Nzg0ODkzNTQsImlhdCI6MTY3ODQ4NTc1NCwianRpIjoiZTU0YTVkZTktZGU1YS00MmVhLWJiNDgtMzVkMDAxMmJmNjhkIn0.QCYycZ5-4rM3B95A8Qimj5kesZt3JpL93eRb7eLajklz8WhT6832dspMnTaf_YyNUhHtzK-izkbWtfC5pUAZYDHwWQLyAKIxhFsml2oZTj5M_OzWfPRaWI_AIERwpjA-kx3UvZRSE99VziLlGNtz-5cR8Xs8RMufalv3DuhqCKGki8K5PkjFXp3hTm54FzluOyq65DcYIKfyDgDDu5GmK3SjcO2ksSVjQMlujjVMXmb1IrdJaYuNURaKUV3ny9O6Ti-tSDWL9tX77yigH2VflQmuAD5aJOcX7lKUP-Q_uhoAh-DTtCx_EqSsZRCpz4ExBwzrhb7dTPR4Tl3N3QlFIQ",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:9443/oauth2/introspect",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"oauth2",
+						"introspect"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Introspect",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsIm5iZiI6MTY3OTUwODg3MCwiYXpwIjoibjAyMk1MS0dEQlhsUTR6XzU3bzBVNThsU0JzYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJyZWFsbSI6eyJzaWduaW5nX3RlbmFudCI6ImNhcmJvbi5zdXBlciJ9LCJleHAiOjE2Nzk1MDg5MzAsImlhdCI6MTY3OTUwODg3MCwianRpIjoiOWM5OTVlNzktNGNjNi00MjliLWFjZWEtN2ZiNWNkYWJhODBhIn0.JZwA5teflU4htt3p2nkrGd79jB72klKpO-8b8kG3veG3UGRb7BZN3vzvQOEb3ZO4rE4JRBvvaXXQ4RFVZ6rtwl0f01OyyHwm58HUQLigrww5rNL-2Ji_W863kEGQVgm7ddfUfGFS_xDzgZN5HH39b2l3WHRiY1-L_qZ2S_D5Gx7SLL_EUbV4ksa0l8Ir19-MgwTkayVeQXjYk5H1XiKSerMud9UJJTkWDlkJSTTxtbGkwDsoXutDbZd9nkaiRg-wfJL2V92u_UNOT0ai3nO2KJFYfYmNx9Yptnz3W5-1b6t_jJe2xLjVqrZzutI5HJfH8xEFEGjphP4erTTQSfxcIw",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:9443/oauth2/introspect",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "9443",
+							"path": [
+								"oauth2",
+								"introspect"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Mar 2023 18:14:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "WSO2 Carbon Server"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"aut\": \"APPLICATION\",\n    \"nbf\": 1679508870,\n    \"scope\": \"default\",\n    \"AuthorizedUser\": \"admin@carbon.super\",\n    \"active\": true,\n    \"cnf\": {\n        \"x5t#SHA256\": \"8z4a8pqsbF_I-aDzootvANher26TxlX9rYEDuJ43KBg\"\n    },\n    \"token_type\": \"JWT\",\n    \"exp\": 1679508930,\n    \"iat\": 1679508870,\n    \"client_id\": \"n022MLKGDBXlQ4z_57o0U58lSBsa\",\n    \"username\": \"admin@carbon.super\"\n}"
+				}
+			]
+		},
+		{
+			"name": "API-Cert bound C1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoidDl5OGVfcGNReW45RVV5dDRtZHlhOUE5OUtvYSIsIm5iZiI6MTY4MTMzMzc2NSwiYXpwIjoidDl5OGVfcGNReW45RVV5dDRtZHlhOUE5OUtvYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2Ojh6NGE4cHFzYkZfSS1hRHpvb3R2QU5oZXIyNlR4bFg5cllFRHVKNDNLQmciLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJjbmYiOnsieDV0I1MyNTYiOiI4ejRhOHBxc2JGX0ktYUR6b290dkFOaGVyMjZUeGxYOXJZRUR1SjQzS0JnIn0sInJlYWxtIjp7InNpZ25pbmdfdGVuYW50IjoiY2FyYm9uLnN1cGVyIn0sImV4cCI6MTY4MTMzNzM2NSwiaWF0IjoxNjgxMzMzNzY1LCJqdGkiOiIzOWU1MGRjYy05OGM3LTRmYjctOTdjOC00NzljNDdmMDgzNjUifQ.YCVMVZa3AhJ6eFpd2YIC5Ulg_r8ux6mAOpJiOuqSkLdrpeELeGtn0mU3BJkk9JUvUBRJWo25psFMlcmwKZLtniZa7L3VsZ8Mh_T8nATi7qbSFhA4Mm6wuoPif3bmLvGAY0h8UpPWraLkKvWysTZTw6nm4DkbDLbg4YprO1vCj3KruTyjaR6ferLrL050bXHqsz22PuPZhcaeWh1VDZ_834ececLl_XqddOesNrRVuKe87M1-0es8acxCsjF5meN6hmgT8I4uecYhmxtHSWsveiwFWClpLCYu_0j4gxJluJNCKOA9XHUBl-li1DFNneSzMSllO6DIW-OMxrFFXvHYuQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN%20CERTIFICATE-----MIIDjDCCAnQCCQCSth1GmFISKjANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzAzMTAxOTQzNDVaFw0zMzAzMDcxOTQzNDVaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAse6q6j6byuNwzqXV6S4UAxKm%2FEhDRiM4BgL5Gfx1rfAIIIHkOvC75sAPn6Q08r8zS%2B7o0H4qRkZ5L20LeB2ukE9Oatnr9JnlzUp6eyECm7PS%2B8HkTLJVuykevKEKfk9HtiDzMY7Wik6U9fk94oUqIHiPhDn1aUCpZ0BeSguXWjMu%2B9tcEVRzToup0sAC4O8trOrVA7qs%2FJe5xusFYmL1ypJhidm0EpPaf%2BXf%2FxsfYC0OAXE7dofgHFx8BtcMhTCJuTLV8okvlp%2BB%2FAUi4C3jA%2Fyj2nVOy44%2FvmD2IQmeXGjdqexhiy5E2hroW8Ptyo35LcDc5K%2FmVUohdkN47qK5ZQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQArxrzJawStA3NaVv9cv9ww%2Bfq8%2BTX9pNU5%2Fv33a9gI8es0cxgMsIM1rchOeO5UGdQ5iEGkjdG8d%2BTuU4bX%2BztgfB8oIhhGK7W1ewa9RkuFzkYTk0YEXwvUPe%2BHNqGRkcuiEIphSqC%2FfrqUEQQjTqWF4FcZkZTEjVmpU3YBoF%2F8srEIcPLeaSVt7gIbsDEhvHKPs06v2pX4T9dUE0YzPsxp7OSEtMpNV%2FWXBTDvKFfNJKT6pe7iyRL%2BomUGDfRdo78IAKD8j5suPQ%2BYMjNdi%2Bb24PJ%2BbGGAbOL6iCzr1FRedij5HE9b7SzaNstPJbGkkJcDyFbNAlNAGC3mFIPb50zZ-----END%20CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8243/pizzashack/1.0.0/menu",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"pizzashack",
+						"1.0.0",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API-Cert bound C2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiNnB1ZjVZMFN1ZlpIT2hROUc5Z3p0Qk1TUjdNYSIsIm5iZiI6MTY4MTMzNTQ3NCwiYXpwIjoiNnB1ZjVZMFN1ZlpIT2hROUc5Z3p0Qk1TUjdNYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2OjdwTExJZWoxaGVib0g4VWNhSng3cnJHZ1NvYXhTR1lEMzBmRmNMMzNUVXMiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJjbmYiOnsieDV0I1MyNTYiOiI3cExMSWVqMWhlYm9IOFVjYUp4N3JyR2dTb2F4U0dZRDMwZkZjTDMzVFVzIn0sInJlYWxtIjp7InNpZ25pbmdfdGVuYW50IjoiY2FyYm9uLnN1cGVyIn0sImV4cCI6MTY4MTMzOTA3NCwiaWF0IjoxNjgxMzM1NDc0LCJqdGkiOiIxOTQ0N2QwMC1kNDY0LTRmNTktYTUxZC00YzA1M2JhMzY1MWMifQ.bnY07A3ZvKnW_D8K62wsZQkr68rRG3OeCNiUk-x0Ahem1C-71mzRwXNiFndCWXx1pl0kFPMcm1r0zssfphU52bkSwLN8sy0-SXf9scRlGxwlyezamijedxSqtxCMDIGgKmccFTuoUmpkN3FDPzdfwqdUNhf4v8CW-RM9cch6b4g4uw6wTfQ2cLGmnuP_8O1NmJDuyljbOonVWlewc5NkWdGSNCcWxJtpIOnOXgtIDoeC7q_a7mR4Omb7HQKDYO2QcQnkY-MiQ72rkqhAHzJQw4qmRVmpo9JDOpPrXiz2wrdYYuxJc2U2PZ3vq2CiBxmI8e10OUUbpV6DJSEWmhA5hw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN%20CERTIFICATE-----MIIDjDCCAnQCCQD2a4EDO0xfYDANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzA0MTIxNDI3NDhaFw0yNDA0MTExNDI3NDhaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxCn8a%2Fqk7RhR8ChxdA9TeVi0nPcNt%2FLeSHuPjZEwEOXktgZSP1UwIBnPvf1IEGlkDU%2Fj76tZOpMBntrAdzt07KlrVZuM0EA61bKzOs2gSvLS8H4%2FG40GJtpUw68TlEEXAG89znPR4583R3Xck8AzO79VTpQEv0a0R3HknF4Qqd1iFqkU2zeg8ON9JRFrQGnRDAOfFwTeRBabUzvuXna%2FxrLcu8EhS9YQ%2FxqPNhDtnHxdyf5%2F8oqotLVWAaabOVWmJDlCmRvi66fM427o83ljYCVNP4ipMfvgIjXFLVfzcDX3AHGaLxJD2698WMXBpXRIDilo0phskWLuenH1PCrqywIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBu9QIJQaaqkAodfK1%2BXqbI%2FO%2FrNAYS%2BgTKbpuEhbGLbI2Dasu4YceArOH%2BLb0RN%2F1ByFl1CeN9zwXhHEgh%2B45Omqt7ZONP0trv0R%2BAEHibyOokuxbWOowrRTg2PUR4iyqt8j0DORblqnIYCa%2FU7muTtb2mOmGq2Dxr7HW4rUy5q9qmEzircw1snGskbBWMfYuJIcl2MkPdUacuMujiqiYOCxQ1xl83ynKFzi92EbmYbmdSU3rqhBjxdeY4D8NoFsvOLc01PjGZH3vt4zWhS%2Fex2auOAepAMpGvc%2Btj%2F%2Fqdko6d0nn76rpjD4pidMjC%2BqLZ%2FFmxkWVhdOPZsit3CZbK-----END%20CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8243/pizzashack/1.0.0/menu",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"pizzashack",
+						"1.0.0",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API-Cert bound C2 wrong cert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiNnB1ZjVZMFN1ZlpIT2hROUc5Z3p0Qk1TUjdNYSIsIm5iZiI6MTY4MTMxMDYxNiwiYXpwIjoiNnB1ZjVZMFN1ZlpIT2hROUc5Z3p0Qk1TUjdNYSIsInNjb3BlIjoiZGVmYXVsdCB4NXQjU0hBMjU2OjdwTExJZWoxaGVib0g4VWNhSng3cnJHZ1NvYXhTR1lEMzBmRmNMMzNUVXMiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJjbmYiOnsieDV0I1MyNTYiOiI3cExMSWVqMWhlYm9IOFVjYUp4N3JyR2dTb2F4U0dZRDMwZkZjTDMzVFVzIn0sInJlYWxtIjp7InNpZ25pbmdfdGVuYW50IjoiY2FyYm9uLnN1cGVyIn0sImV4cCI6MTY4MTMxNDIxNiwiaWF0IjoxNjgxMzEwNjE2LCJqdGkiOiJmNTRlZjI5Ni0zYjQ3LTQ4ZmItOTI5YS0xZGE5ZDQ5ZmUyZjMifQ.HoAjgJwJlY1kfLI-0CrQTSYOzJT9VQUouJjlwKBm9Dmpz_Afnj-arzKM56QJxX2zyBGz3qwTHLHgZ8l3QpqYAXQLWD0G-HB1M_WkGyvQxEg2ED66fSKAodq95B_0_0fZvzNaTMz4Rjr5gMUWHw8qIBCKiDSmiVTjvP3oHxeg-daBiq-HjVuvzLa3ELRb0IiQEtk9eS9XUAty_UTEWn79vKMO1um5-fmNTt_UBzSypiEpRd8GpE__0HRGCXT_f1BAPApxkUMiy8-JSgrKfIb8PCo0gwPyBbReCkKb-quOb8UAzW6-HgUAB_S-4IAbH5fQA0QsW-GWIy1o3VzQ6zH3fw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-wso2-mtls-cert",
+						"value": "-----BEGIN CERTIFICATE-----MIIDjDCCAnQCCQD2a4EDO0xfYDANBgkqhkiG9w0BAQsFADCBhzELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDENMAsGA1UECgwETVVGRzEMMAoGA1UECwwDRUlQMRIwEAYDVQQDDAlsb2NhbGhvc3QxJDAiBgkqhkiG9w0BCQEWFWhhcnNoYW4uZGxsQGdtYWlsLmNvbTAeFw0yMzA0MTIxNDI3NDhaFw0yNDA0MTExNDI3NDhaMIGHMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcMC0NoYXBlbCBIaWxsMQ0wCwYDVQQKDARNVUZHMQwwCgYDVQQLDANFSVAxEjAQBgNVBAMMCWxvY2FsaG9zdDEkMCIGCSqGSIb3DQEJARYVaGFyc2hhbi5kbGxAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxCn8a/qk7RhR8ChxdA9TeVi0nPcNt/LeSHuPjZEwEOXktgZSP1UwIBnPvf1IEGlkDU/j76tZOpMBntrAdzt07KlrVZuM0EA61bKzOs2gSvLS8H4/G40GJtpUw68TlEEXAG89znPR4583R3Xck8AzO79VTpQEv0a0R3HknF4Qqd1iFqkU2zeg8ON9JRFrQGnRDAOfFwTeRBabUzvuXna/xrLcu8EhS9YQ/xqPNhDtnHxdyf5/8oqotLVWAaabOVWmJDlCmRvi66fM427o83ljYCVNP4ipMfvgIjXFLVfzcDX3AHGaLxJD2698WMXBpXRIDilo0phskWLuenH1PCrqywIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBu9QIJQaaqkAodfK1+XqbI/O/rNAYS+gTKbpuEhbGLbI2Dasu4YceArOH+Lb0RN/1ByFl1CeN9zwXhHEgh+45Omqt7ZONP0trv0R+AEHibyOokuxbWOowrRTg2PUR4iyqt8j0DORblqnIYCa/U7muTtb2mOmGq2Dxr7HW4rUy5q9qmEzircw1snGskbBWMfYuJIcl2MkPdUacuMujiqiYOCxQ1xl83ynKFzi92EbmYbmdSU3rqhBjxdeY4D8NoFsvOLc01PjGZH3vt4zWhS/ex2auOAepAMpGvc+tj//qdko6d0nn76rpjD4pidMjC+qLZ/FmxkWVhdOPZsit3CZbK-----END CERTIFICATE-----",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8243/pizzashack/1.0.0/menu",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"pizzashack",
+						"1.0.0",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQiOiJOMkpqTWpOaU0yRXhZalJrTnpaalptWTFZVEF4Tm1GbE5qZzRPV1UxWVdRMll6YzFObVk1TlEiLCJraWQiOiJNREpsTmpJeE4yRTFPR1psT0dWbU1HUXhPVEZsTXpCbU5tRmpaalEwWTJZd09HWTBOMkkwWXpFNFl6WmpOalJoWW1SbU1tUTBPRGRpTkRoak1HRXdNQV9SUzI1NiIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbiIsImF1dCI6IkFQUExJQ0FUSU9OIiwiYXVkIjoiV0o4VWN3TVJVS282b05paGZJMFp5a3lhbU5jYSIsIm5iZiI6MTY3ODQ4MTIxNywiYXpwIjoiV0o4VWN3TVJVS282b05paGZJMFp5a3lhbU5jYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6OTQ0M1wvb2F1dGgyXC90b2tlbiIsInJlYWxtIjp7InNpZ25pbmdfdGVuYW50IjoiY2FyYm9uLnN1cGVyIn0sImV4cCI6MTY3ODQ4NDgxNywiaWF0IjoxNjc4NDgxMjE3LCJqdGkiOiIyMWE5MTI3Mi1mYzEzLTQwNzgtYTY0Mi1mMWExZWUwYWZhMTMifQ.GL1NiQSW4iOj_7QuW88IKTSM_7JdawO1dLeUVTyKgXbEvAScQTKMYSBuaml01QmH31ZDFujRWhnhx0TuCfCtZlILFpbXHNoEV4OEIsxoMh3SvP-xfLnGD7_v-fgrI9kJNiaCDCA-2kehiCif6gkuNoZ_1MuAuEfBuMBtmUCAHhl36a6JyfdgYO0GVqtoyIrM-tj2As_-vvy1qVgs6TVtajbe8L97JE8emfYEZcvU6iOEfJNAbjWHXT_btEnt33ce8jj9H4SzrY4Mn8AcELbfYJL7GV-y6KBm98zREukD0Y3LH1Z-XkvLdsC8Lrcs-vkCtJT98yAbwyvR4g4cX3rnNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8243/pizzashack/1.0.0/menu",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8243",
+					"path": [
+						"pizzashack",
+						"1.0.0",
+						"menu"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
